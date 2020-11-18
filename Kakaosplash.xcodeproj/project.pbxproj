@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		DA3D8A0925650B5C003C4743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A0825650B5C003C4743 /* AppDelegate.swift */; };
-		DA3D8A0B25650B5C003C4743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A0A25650B5C003C4743 /* SceneDelegate.swift */; };
 		DA3D8A0D25650B5C003C4743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A0C25650B5C003C4743 /* ViewController.swift */; };
 		DA3D8A1025650B5C003C4743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3D8A0E25650B5C003C4743 /* Main.storyboard */; };
 		DA3D8A1225650B5C003C4743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3D8A1125650B5C003C4743 /* Assets.xcassets */; };
 		DA3D8A1525650B5C003C4743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3D8A1325650B5C003C4743 /* LaunchScreen.storyboard */; };
+		DA3D8A32256514D5003C4743 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A31256514D5003C4743 /* SplashViewController.swift */; };
+		DA3D8A3725651802003C4743 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A3625651802003C4743 /* UIColor.swift */; };
+		DA3D8A3C256518A7003C4743 /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A3B256518A7003C4743 /* FontProvider.swift */; };
+		DA3D8A4725651A3B003C4743 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA3D8A0525650B5C003C4743 /* Kakaosplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kakaosplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3D8A0825650B5C003C4743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA3D8A0A25650B5C003C4743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DA3D8A0C25650B5C003C4743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA3D8A0F25650B5C003C4743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA3D8A1125650B5C003C4743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA3D8A1425650B5C003C4743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA3D8A1625650B5C003C4743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA3D8A31256514D5003C4743 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		DA3D8A3625651802003C4743 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		DA3D8A3B256518A7003C4743 /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
+		DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +62,11 @@
 		DA3D8A0725650B5C003C4743 /* Kakaosplash */ = {
 			isa = PBXGroup;
 			children = (
+				DA3D8A4925651BBB003C4743 /* Model */,
+				DA3D8A3A25651888003C4743 /* Utility */,
+				DA3D8A35256517E7003C4743 /* Extension */,
+				DA3D8A2025651430003C4743 /* Presentation */,
 				DA3D8A0825650B5C003C4743 /* AppDelegate.swift */,
-				DA3D8A0A25650B5C003C4743 /* SceneDelegate.swift */,
 				DA3D8A0C25650B5C003C4743 /* ViewController.swift */,
 				DA3D8A0E25650B5C003C4743 /* Main.storyboard */,
 				DA3D8A1125650B5C003C4743 /* Assets.xcassets */,
@@ -65,6 +74,54 @@
 				DA3D8A1625650B5C003C4743 /* Info.plist */,
 			);
 			path = Kakaosplash;
+			sourceTree = "<group>";
+		};
+		DA3D8A2025651430003C4743 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DA3D8A30256514C9003C4743 /* Splash */,
+				DA3D8A3F25651A0D003C4743 /* PhotoList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DA3D8A30256514C9003C4743 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				DA3D8A31256514D5003C4743 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		DA3D8A35256517E7003C4743 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA3D8A3625651802003C4743 /* UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DA3D8A3A25651888003C4743 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DA3D8A3B256518A7003C4743 /* FontProvider.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		DA3D8A3F25651A0D003C4743 /* PhotoList */ = {
+			isa = PBXGroup;
+			children = (
+				DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */,
+			);
+			path = PhotoList;
+			sourceTree = "<group>";
+		};
+		DA3D8A4925651BBB003C4743 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3D8A32256514D5003C4743 /* SplashViewController.swift in Sources */,
+				DA3D8A3C256518A7003C4743 /* FontProvider.swift in Sources */,
+				DA3D8A3725651802003C4743 /* UIColor.swift in Sources */,
 				DA3D8A0D25650B5C003C4743 /* ViewController.swift in Sources */,
 				DA3D8A0925650B5C003C4743 /* AppDelegate.swift in Sources */,
-				DA3D8A0B25650B5C003C4743 /* SceneDelegate.swift in Sources */,
+				DA3D8A4725651A3B003C4743 /* PhotoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -293,7 +353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.nicholaskim.Kakaosplash;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.nicholaskim.kakaosplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,7 +372,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.nicholaskim.Kakaosplash;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.nicholaskim.kakaosplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
