@@ -16,6 +16,14 @@
 		DA3D8A3725651802003C4743 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A3625651802003C4743 /* UIColor.swift */; };
 		DA3D8A3C256518A7003C4743 /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A3B256518A7003C4743 /* FontProvider.swift */; };
 		DA3D8A4725651A3B003C4743 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */; };
+		DA7EE3D925691EA0009D94EC /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3D825691EA0009D94EC /* Dependencies.swift */; };
+		DA7EE3DD2569233D009D94EC /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3DC2569233D009D94EC /* NetworkClient.swift */; };
+		DA7EE3EF2569244D009D94EC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3EE2569244D009D94EC /* RootViewController.swift */; };
+		DA7EE3F225692750009D94EC /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3F125692750009D94EC /* PhotoService.swift */; };
+		DA7EE46325692A4E009D94EC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE46225692A4E009D94EC /* API.swift */; };
+		DA7EE49A256931EC009D94EC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE499256931EC009D94EC /* Photo.swift */; };
+		DA7EE49E2569329C009D94EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE49D2569329C009D94EC /* User.swift */; };
+		DA7EE4A1256935D7009D94EC /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE4A0256935D7009D94EC /* PhotoListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,14 @@
 		DA3D8A3625651802003C4743 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		DA3D8A3B256518A7003C4743 /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
 		DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		DA7EE3D825691EA0009D94EC /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		DA7EE3DC2569233D009D94EC /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = Kakaosplash/Model/Network/NetworkClient.swift; sourceTree = SOURCE_ROOT; };
+		DA7EE3EE2569244D009D94EC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		DA7EE3F125692750009D94EC /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoService.swift; path = Kakaosplash/Model/Network/PhotoService.swift; sourceTree = SOURCE_ROOT; };
+		DA7EE46225692A4E009D94EC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = Kakaosplash/Model/Network/API.swift; sourceTree = SOURCE_ROOT; };
+		DA7EE499256931EC009D94EC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		DA7EE49D2569329C009D94EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DA7EE4A0256935D7009D94EC /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,7 @@
 			children = (
 				DA3D8A30256514C9003C4743 /* Splash */,
 				DA3D8A3F25651A0D003C4743 /* PhotoList */,
+				DA7EE3EE2569244D009D94EC /* RootViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -105,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3D8A3B256518A7003C4743 /* FontProvider.swift */,
+				DA7EE3D825691EA0009D94EC /* Dependencies.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -113,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */,
+				DA7EE4A0256935D7009D94EC /* PhotoListViewModel.swift */,
 			);
 			path = PhotoList;
 			sourceTree = "<group>";
@@ -120,8 +139,30 @@
 		DA3D8A4925651BBB003C4743 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA7EE498256931AF009D94EC /* Entity */,
+				DA7EE3DB25692332009D94EC /* Network */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DA7EE3DB25692332009D94EC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DA7EE3DC2569233D009D94EC /* NetworkClient.swift */,
+				DA7EE3F125692750009D94EC /* PhotoService.swift */,
+				DA7EE46225692A4E009D94EC /* API.swift */,
+			);
+			name = Network;
+			path = Kakaosplash/Model/Network;
+			sourceTree = "<group>";
+		};
+		DA7EE498256931AF009D94EC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DA7EE499256931EC009D94EC /* Photo.swift */,
+				DA7EE49D2569329C009D94EC /* User.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,12 +235,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7EE49E2569329C009D94EC /* User.swift in Sources */,
+				DA7EE49A256931EC009D94EC /* Photo.swift in Sources */,
+				DA7EE46325692A4E009D94EC /* API.swift in Sources */,
+				DA7EE3F225692750009D94EC /* PhotoService.swift in Sources */,
+				DA7EE3D925691EA0009D94EC /* Dependencies.swift in Sources */,
 				DA3D8A32256514D5003C4743 /* SplashViewController.swift in Sources */,
 				DA3D8A3C256518A7003C4743 /* FontProvider.swift in Sources */,
 				DA3D8A3725651802003C4743 /* UIColor.swift in Sources */,
 				DA3D8A0D25650B5C003C4743 /* ViewController.swift in Sources */,
 				DA3D8A0925650B5C003C4743 /* AppDelegate.swift in Sources */,
 				DA3D8A4725651A3B003C4743 /* PhotoListViewController.swift in Sources */,
+				DA7EE3DD2569233D009D94EC /* NetworkClient.swift in Sources */,
+				DA7EE3EF2569244D009D94EC /* RootViewController.swift in Sources */,
+				DA7EE4A1256935D7009D94EC /* PhotoListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

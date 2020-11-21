@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Initialize UI
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = SplashViewController()
+        window?.rootViewController = RootViewController()
         window?.makeKeyAndVisible()
         
         return true

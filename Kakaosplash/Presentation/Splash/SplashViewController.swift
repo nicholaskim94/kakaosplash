@@ -9,6 +9,8 @@ import UIKit
 
 class SplashViewController: UIViewController {
     
+    private let dependencies: Dependencies
+    
     private lazy var label: UILabel = {
         let label = UILabel()
         label.text = "Kakaosplash, Photos for everyone"
@@ -18,13 +20,23 @@ class SplashViewController: UIViewController {
         return label
     }()
     
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            self?.replaceRootViewController(to: PhotoListViewController())
+            guard let self = self else { return }
+            self.replaceRootViewController(to: PhotoListViewController(dependencies: self.dependencies))
         }
     }
     
