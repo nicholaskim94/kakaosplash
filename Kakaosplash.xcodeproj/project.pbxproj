@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA15D41F256A7E9800D45701 /* KakaoSpashError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15D41E256A7E9800D45701 /* KakaoSpashError.swift */; };
+		DA15D463256A82F200D45701 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15D462256A82F200D45701 /* Observable.swift */; };
+		DA15D466256A865F00D45701 /* PhotoListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15D465256A865F00D45701 /* PhotoListViewCell.swift */; };
+		DA15D469256A879600D45701 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15D468256A879600D45701 /* Array.swift */; };
+		DA15D46D256A8D6300D45701 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15D46C256A8D6300D45701 /* ImageCache.swift */; };
 		DA3D8A0925650B5C003C4743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A0825650B5C003C4743 /* AppDelegate.swift */; };
 		DA3D8A0D25650B5C003C4743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A0C25650B5C003C4743 /* ViewController.swift */; };
 		DA3D8A1025650B5C003C4743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3D8A0E25650B5C003C4743 /* Main.storyboard */; };
@@ -27,6 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA15D41E256A7E9800D45701 /* KakaoSpashError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KakaoSpashError.swift; path = Kakaosplash/Presentation/PhotoList/KakaoSpashError.swift; sourceTree = SOURCE_ROOT; };
+		DA15D462256A82F200D45701 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		DA15D465256A865F00D45701 /* PhotoListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewCell.swift; sourceTree = "<group>"; };
+		DA15D468256A879600D45701 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		DA15D46C256A8D6300D45701 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Kakaosplash/Utility/ImageCache.swift; sourceTree = SOURCE_ROOT; };
 		DA3D8A0525650B5C003C4743 /* Kakaosplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kakaosplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3D8A0825650B5C003C4743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA3D8A0C25650B5C003C4743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +123,7 @@
 		DA3D8A35256517E7003C4743 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DA15D468256A879600D45701 /* Array.swift */,
 				DA3D8A3625651802003C4743 /* UIColor.swift */,
 			);
 			path = Extension;
@@ -123,6 +134,7 @@
 			children = (
 				DA3D8A3B256518A7003C4743 /* FontProvider.swift */,
 				DA7EE3D825691EA0009D94EC /* Dependencies.swift */,
+				DA15D462256A82F200D45701 /* Observable.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -132,6 +144,7 @@
 			children = (
 				DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */,
 				DA7EE4A0256935D7009D94EC /* PhotoListViewModel.swift */,
+				DA15D465256A865F00D45701 /* PhotoListViewCell.swift */,
 			);
 			path = PhotoList;
 			sourceTree = "<group>";
@@ -151,6 +164,8 @@
 				DA7EE3DC2569233D009D94EC /* NetworkClient.swift */,
 				DA7EE3F125692750009D94EC /* PhotoService.swift */,
 				DA7EE46225692A4E009D94EC /* API.swift */,
+				DA15D41E256A7E9800D45701 /* KakaoSpashError.swift */,
+				DA15D46C256A8D6300D45701 /* ImageCache.swift */,
 			);
 			name = Network;
 			path = Kakaosplash/Model/Network;
@@ -235,12 +250,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA15D463256A82F200D45701 /* Observable.swift in Sources */,
 				DA7EE49E2569329C009D94EC /* User.swift in Sources */,
+				DA15D466256A865F00D45701 /* PhotoListViewCell.swift in Sources */,
+				DA15D41F256A7E9800D45701 /* KakaoSpashError.swift in Sources */,
 				DA7EE49A256931EC009D94EC /* Photo.swift in Sources */,
 				DA7EE46325692A4E009D94EC /* API.swift in Sources */,
 				DA7EE3F225692750009D94EC /* PhotoService.swift in Sources */,
 				DA7EE3D925691EA0009D94EC /* Dependencies.swift in Sources */,
 				DA3D8A32256514D5003C4743 /* SplashViewController.swift in Sources */,
+				DA15D46D256A8D6300D45701 /* ImageCache.swift in Sources */,
+				DA15D469256A879600D45701 /* Array.swift in Sources */,
 				DA3D8A3C256518A7003C4743 /* FontProvider.swift in Sources */,
 				DA3D8A3725651802003C4743 /* UIColor.swift in Sources */,
 				DA3D8A0D25650B5C003C4743 /* ViewController.swift in Sources */,

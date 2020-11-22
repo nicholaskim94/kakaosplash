@@ -14,15 +14,6 @@ class NetworkClient {
     func executeRequest(_ api: API, completion: @escaping (Result<Data, Error>) -> Void) {
         
         let task = urlSession.dataTask(with: api.request) { data, response, error in
-            #if DEBUG
-            if
-                let data = data,
-                let responseString = String(bytes: data, encoding: .utf8) {
-                // The response body seems to be a valid UTF-8 string, so print that.
-                print("RESPONSE")
-                print(responseString)
-            }
-            #endif
 
             if let error = error {
                 completion(.failure(error))
@@ -33,9 +24,6 @@ class NetworkClient {
                 completion(.success(data))
             }
         }
-        #if DEBUG
-        print("REQUEST")
-        #endif
         task.resume()
     }
 }

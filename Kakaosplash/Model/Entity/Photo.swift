@@ -7,17 +7,18 @@
 
 import Foundation
 
-struct PhotoUrlPack: Decodable {
-    let raw: String
-    let full: String
-    let regular: String
-    let small: String
-    let thumb: String
-}
-
 struct Photo: Decodable {
     let id: String
+    let height: Int
+    let width: Int
     let user: User
     let urls: PhotoUrlPack
     
+    struct PhotoUrlPack: Decodable {
+        let raw: String
+        let full: String
+        let regular: String
+        let small: String
+        let thumb: String
+    }
 }

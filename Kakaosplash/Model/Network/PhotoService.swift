@@ -15,6 +15,8 @@ enum PhotosOrderBy: String {
 
 class PhotoService {
     
+    public static let photosPerPage = 20
+    
     typealias Dependencies = UsesNetworkClient
     
     private let networkClient: NetworkClient
@@ -24,23 +26,24 @@ class PhotoService {
     }
     
     func getPhotoList(page: Int,
-                      perPage: Int = 20,
+                      perPage: Int = photosPerPage,
                       orderBy: PhotosOrderBy,
-                      completion: @escaping (Result<[Photo], Error>) -> Void) {
+                      completion: @escaping (Result<[Photo], KakaosplashError>) -> Void) {
         let apiRequest = API.listPhotos(page: page,
                                  perPage: perPage,
                                  order: orderBy.rawValue)
-        networkClient.executeRequest(apiRequest) { [weak self] result in
+        networkClient.executeRequest(apiRequest) { result in
             switch result {
             case .failure(let error):
                 #if DEBUG
                 print("ERROR_READING_EVENT_LIST", error.localizedDescription)
                 #endif
-                completion(.failure(error))
+                completion(.failure(.network(description: error.localizedDescription)))
                 
             case .success(let data):
                 guard
                     let response = try? JSONDecoder().decode([Photo].self, from: data) else {
+                    completion(.failure(.parsing(description: "Failed to decode Photos")))
                     return
                 }
                 
