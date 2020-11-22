@@ -14,9 +14,11 @@ class PhotoListViewModel {
     private var currentPage = 1
     private var isLoading = false
     
+    
     // Mark: Observables
     let photos: Observable<[Photo]> = Observable([])
     let error: Observable<KakaosplashError?> = Observable(nil)
+    let focusedIndex: Observable<Int?> = Observable(nil)
     
     init(photoService: PhotoService) {
         self.photoService = photoService

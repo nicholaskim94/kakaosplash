@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Simple Observable, cannot be shared
 class Observable<T> {
 
     var value: T {

@@ -15,6 +15,7 @@ class PhotoListViewController: UIViewController {
     // MARK: - UI elements
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.backgroundColor = .black
         tableView.dataSource = self
         tableView.delegate = self
         tableView.prefetchDataSource = self
@@ -51,6 +52,8 @@ class PhotoListViewController: UIViewController {
         viewModel.fetchPhotoList()
     }
     
+    
+    
     private func setupViews() {
         view.addSubview(tableView)
         
@@ -79,6 +82,15 @@ class PhotoListViewController: UIViewController {
             
             DispatchQueue.main.async { [weak self] in
                 self?.showError(message: error.localizedDescription)
+            }
+        }
+        
+        viewModel.focusedIndex.bind { [weak self] index in
+            guard let index = index else { return }
+
+            DispatchQueue.main.async { [weak self] in
+                let indexPath = IndexPath(row: index, section: 0)
+                self?.tableView.scrollToRow(at: indexPath, at: .none, animated: false)
             }
         }
     }
@@ -116,6 +128,13 @@ extension PhotoListViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        viewModel.focusedIndex.value = indexPath.row
+        
+        let viewController = PhotoDetailViewController(dependencies: dependencies, parentViewModel: viewModel)
+        viewController.modalPresentationStyle = .fullScreen
+        
+        present(viewController, animated: true, completion: nil)
 
     }
     
