@@ -50,7 +50,7 @@ class PhotoListViewCell: UITableViewCell {
         contentView.addSubview(photoImageView)
         contentView.addSubview(label)
         
-        contentView.backgroundColor = .greyScale4
+        contentView.backgroundColor = .black
         
         let imageViewContraints = [
             photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),

@@ -49,7 +49,28 @@ class PhotoListViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+        setupSearch()
         
+        bindToViewModel()
+        viewModel.fetchPhotoList()
+    }
+    
+    private func setupViews() {
+        view.addSubview(tableView)
+        
+        view.backgroundColor = .black
+        
+        let tableViewConstraints = [
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ]
+        
+        NSLayoutConstraint.activate(tableViewConstraints)
+    }
+    
+    private func setupSearch() {
         resultsController = SearchedPhotoListViewController(dependencies: dependencies)
         if let resultsController = resultsController {
             addChild(resultsController)
@@ -73,26 +94,6 @@ class PhotoListViewController: UIViewController {
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        
-        bindToViewModel()
-        viewModel.fetchPhotoList()
-    }
-    
-    
-    
-    private func setupViews() {
-        view.addSubview(tableView)
-        
-        view.backgroundColor = .black
-        
-        let tableViewConstraints = [
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ]
-        
-        NSLayoutConstraint.activate(tableViewConstraints)
     }
     
     private func bindToViewModel() {

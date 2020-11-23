@@ -13,8 +13,6 @@
 		DA15D469256A879600D45701 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15D468256A879600D45701 /* Array.swift */; };
 		DA15D46D256A8D6300D45701 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15D46C256A8D6300D45701 /* ImageCache.swift */; };
 		DA3D8A0925650B5C003C4743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A0825650B5C003C4743 /* AppDelegate.swift */; };
-		DA3D8A0D25650B5C003C4743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A0C25650B5C003C4743 /* ViewController.swift */; };
-		DA3D8A1025650B5C003C4743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3D8A0E25650B5C003C4743 /* Main.storyboard */; };
 		DA3D8A1225650B5C003C4743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3D8A1125650B5C003C4743 /* Assets.xcassets */; };
 		DA3D8A1525650B5C003C4743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3D8A1325650B5C003C4743 /* LaunchScreen.storyboard */; };
 		DA3D8A32256514D5003C4743 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A31256514D5003C4743 /* SplashViewController.swift */; };
@@ -24,11 +22,11 @@
 		DA522C7E256BA41200A36C10 /* SearchedPhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA522C7D256BA41200A36C10 /* SearchedPhotoListViewController.swift */; };
 		DA522C81256BA7EB00A36C10 /* SearchedPhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA522C80256BA7EB00A36C10 /* SearchedPhotoListViewModel.swift */; };
 		DA522C84256BA8BC00A36C10 /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA522C83256BA8BC00A36C10 /* ViewModelProtocols.swift */; };
+		DA522C8B256BC5E500A36C10 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA522C8A256BC5E500A36C10 /* API.swift */; };
 		DA7EE3D925691EA0009D94EC /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3D825691EA0009D94EC /* Dependencies.swift */; };
 		DA7EE3DD2569233D009D94EC /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3DC2569233D009D94EC /* NetworkClient.swift */; };
 		DA7EE3EF2569244D009D94EC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3EE2569244D009D94EC /* RootViewController.swift */; };
 		DA7EE3F225692750009D94EC /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3F125692750009D94EC /* PhotoService.swift */; };
-		DA7EE46325692A4E009D94EC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE46225692A4E009D94EC /* API.swift */; };
 		DA7EE49A256931EC009D94EC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE499256931EC009D94EC /* Photo.swift */; };
 		DA7EE49E2569329C009D94EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE49D2569329C009D94EC /* User.swift */; };
 		DA7EE4A1256935D7009D94EC /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE4A0256935D7009D94EC /* PhotoListViewModel.swift */; };
@@ -39,15 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DA15D41E256A7E9800D45701 /* KakaoSpashError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KakaoSpashError.swift; path = Kakaosplash/Presentation/PhotoList/KakaoSpashError.swift; sourceTree = SOURCE_ROOT; };
+		DA15D41E256A7E9800D45701 /* KakaoSpashError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KakaoSpashError.swift; path = Kakaosplash/Model/Network/KakaoSpashError.swift; sourceTree = SOURCE_ROOT; };
 		DA15D462256A82F200D45701 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		DA15D465256A865F00D45701 /* PhotoListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewCell.swift; sourceTree = "<group>"; };
 		DA15D468256A879600D45701 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		DA15D46C256A8D6300D45701 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Kakaosplash/Utility/ImageCache.swift; sourceTree = SOURCE_ROOT; };
+		DA15D46C256A8D6300D45701 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Kakaosplash/Model/Network/ImageCache.swift; sourceTree = SOURCE_ROOT; };
 		DA3D8A0525650B5C003C4743 /* Kakaosplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kakaosplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3D8A0825650B5C003C4743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA3D8A0C25650B5C003C4743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA3D8A0F25650B5C003C4743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA3D8A1125650B5C003C4743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA3D8A1425650B5C003C4743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA3D8A1625650B5C003C4743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,18 +54,18 @@
 		DA522C7D256BA41200A36C10 /* SearchedPhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedPhotoListViewController.swift; sourceTree = "<group>"; };
 		DA522C80256BA7EB00A36C10 /* SearchedPhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedPhotoListViewModel.swift; sourceTree = "<group>"; };
 		DA522C83256BA8BC00A36C10 /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
+		DA522C8A256BC5E500A36C10 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = Kakaosplash/Model/Network/API.swift; sourceTree = SOURCE_ROOT; };
 		DA7EE3D825691EA0009D94EC /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		DA7EE3DC2569233D009D94EC /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = Kakaosplash/Model/Network/NetworkClient.swift; sourceTree = SOURCE_ROOT; };
 		DA7EE3EE2569244D009D94EC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		DA7EE3F125692750009D94EC /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoService.swift; path = Kakaosplash/Model/Network/PhotoService.swift; sourceTree = SOURCE_ROOT; };
-		DA7EE46225692A4E009D94EC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = Kakaosplash/Model/Network/API.swift; sourceTree = SOURCE_ROOT; };
 		DA7EE499256931EC009D94EC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		DA7EE49D2569329C009D94EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DA7EE4A0256935D7009D94EC /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		DAF98800256AC352005CC045 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		DAF98804256AC685005CC045 /* PhotoDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewCell.swift; sourceTree = "<group>"; };
 		DAF9880C256AE869005CC045 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		DAF9880F256AE9A5005CC045 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResponse.swift; path = Kakaosplash/Extension/SearchResponse.swift; sourceTree = SOURCE_ROOT; };
+		DAF9880F256AE9A5005CC045 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResponse.swift; path = Kakaosplash/Model/Network/SearchResponse.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +103,6 @@
 				DA3D8A35256517E7003C4743 /* Extension */,
 				DA3D8A2025651430003C4743 /* Presentation */,
 				DA3D8A0825650B5C003C4743 /* AppDelegate.swift */,
-				DA3D8A0C25650B5C003C4743 /* ViewController.swift */,
-				DA3D8A0E25650B5C003C4743 /* Main.storyboard */,
 				DA3D8A1125650B5C003C4743 /* Assets.xcassets */,
 				DA3D8A1325650B5C003C4743 /* LaunchScreen.storyboard */,
 				DA3D8A1625650B5C003C4743 /* Info.plist */,
@@ -181,11 +175,11 @@
 			isa = PBXGroup;
 			children = (
 				DA7EE3DC2569233D009D94EC /* NetworkClient.swift */,
-				DA7EE46225692A4E009D94EC /* API.swift */,
 				DA7EE3F125692750009D94EC /* PhotoService.swift */,
 				DA15D41E256A7E9800D45701 /* KakaoSpashError.swift */,
 				DA15D46C256A8D6300D45701 /* ImageCache.swift */,
 				DAF9880F256AE9A5005CC045 /* SearchResponse.swift */,
+				DA522C8A256BC5E500A36C10 /* API.swift */,
 			);
 			name = Network;
 			path = Kakaosplash/Model/Network;
@@ -268,7 +262,6 @@
 			files = (
 				DA3D8A1525650B5C003C4743 /* LaunchScreen.storyboard in Resources */,
 				DA3D8A1225650B5C003C4743 /* Assets.xcassets in Resources */,
-				DA3D8A1025650B5C003C4743 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +278,8 @@
 				DA15D41F256A7E9800D45701 /* KakaoSpashError.swift in Sources */,
 				DA522C81256BA7EB00A36C10 /* SearchedPhotoListViewModel.swift in Sources */,
 				DA7EE49A256931EC009D94EC /* Photo.swift in Sources */,
-				DA7EE46325692A4E009D94EC /* API.swift in Sources */,
 				DA7EE3F225692750009D94EC /* PhotoService.swift in Sources */,
+				DA522C8B256BC5E500A36C10 /* API.swift in Sources */,
 				DA7EE3D925691EA0009D94EC /* Dependencies.swift in Sources */,
 				DA3D8A32256514D5003C4743 /* SplashViewController.swift in Sources */,
 				DA15D46D256A8D6300D45701 /* ImageCache.swift in Sources */,
@@ -295,7 +288,6 @@
 				DAF9880D256AE869005CC045 /* String.swift in Sources */,
 				DAF98805256AC685005CC045 /* PhotoDetailViewCell.swift in Sources */,
 				DA3D8A3725651802003C4743 /* UIColor.swift in Sources */,
-				DA3D8A0D25650B5C003C4743 /* ViewController.swift in Sources */,
 				DA3D8A0925650B5C003C4743 /* AppDelegate.swift in Sources */,
 				DA3D8A4725651A3B003C4743 /* PhotoListViewController.swift in Sources */,
 				DA7EE3DD2569233D009D94EC /* NetworkClient.swift in Sources */,
@@ -311,14 +303,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA3D8A0E25650B5C003C4743 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA3D8A0F25650B5C003C4743 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DA3D8A1325650B5C003C4743 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
