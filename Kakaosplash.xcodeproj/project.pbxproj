@@ -21,6 +21,9 @@
 		DA3D8A3725651802003C4743 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A3625651802003C4743 /* UIColor.swift */; };
 		DA3D8A3C256518A7003C4743 /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A3B256518A7003C4743 /* FontProvider.swift */; };
 		DA3D8A4725651A3B003C4743 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */; };
+		DA522C7E256BA41200A36C10 /* SearchedPhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA522C7D256BA41200A36C10 /* SearchedPhotoListViewController.swift */; };
+		DA522C81256BA7EB00A36C10 /* SearchedPhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA522C80256BA7EB00A36C10 /* SearchedPhotoListViewModel.swift */; };
+		DA522C84256BA8BC00A36C10 /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA522C83256BA8BC00A36C10 /* ViewModelProtocols.swift */; };
 		DA7EE3D925691EA0009D94EC /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3D825691EA0009D94EC /* Dependencies.swift */; };
 		DA7EE3DD2569233D009D94EC /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3DC2569233D009D94EC /* NetworkClient.swift */; };
 		DA7EE3EF2569244D009D94EC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EE3EE2569244D009D94EC /* RootViewController.swift */; };
@@ -52,6 +55,9 @@
 		DA3D8A3625651802003C4743 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		DA3D8A3B256518A7003C4743 /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
 		DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		DA522C7D256BA41200A36C10 /* SearchedPhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedPhotoListViewController.swift; sourceTree = "<group>"; };
+		DA522C80256BA7EB00A36C10 /* SearchedPhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedPhotoListViewModel.swift; sourceTree = "<group>"; };
+		DA522C83256BA8BC00A36C10 /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
 		DA7EE3D825691EA0009D94EC /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		DA7EE3DC2569233D009D94EC /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = Kakaosplash/Model/Network/NetworkClient.swift; sourceTree = SOURCE_ROOT; };
 		DA7EE3EE2569244D009D94EC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 				DA3D8A4625651A3B003C4743 /* PhotoListViewController.swift */,
 				DA7EE4A0256935D7009D94EC /* PhotoListViewModel.swift */,
 				DA15D465256A865F00D45701 /* PhotoListViewCell.swift */,
+				DA522C7D256BA41200A36C10 /* SearchedPhotoListViewController.swift */,
+				DA522C80256BA7EB00A36C10 /* SearchedPhotoListViewModel.swift */,
+				DA522C83256BA8BC00A36C10 /* ViewModelProtocols.swift */,
 			);
 			path = PhotoList;
 			sourceTree = "<group>";
@@ -274,6 +283,7 @@
 				DA7EE49E2569329C009D94EC /* User.swift in Sources */,
 				DA15D466256A865F00D45701 /* PhotoListViewCell.swift in Sources */,
 				DA15D41F256A7E9800D45701 /* KakaoSpashError.swift in Sources */,
+				DA522C81256BA7EB00A36C10 /* SearchedPhotoListViewModel.swift in Sources */,
 				DA7EE49A256931EC009D94EC /* Photo.swift in Sources */,
 				DA7EE46325692A4E009D94EC /* API.swift in Sources */,
 				DA7EE3F225692750009D94EC /* PhotoService.swift in Sources */,
@@ -290,7 +300,9 @@
 				DA3D8A4725651A3B003C4743 /* PhotoListViewController.swift in Sources */,
 				DA7EE3DD2569233D009D94EC /* NetworkClient.swift in Sources */,
 				DA7EE3EF2569244D009D94EC /* RootViewController.swift in Sources */,
+				DA522C7E256BA41200A36C10 /* SearchedPhotoListViewController.swift in Sources */,
 				DAF98801256AC352005CC045 /* PhotoDetailViewController.swift in Sources */,
+				DA522C84256BA8BC00A36C10 /* ViewModelProtocols.swift in Sources */,
 				DAF98810256AE9A5005CC045 /* SearchResponse.swift in Sources */,
 				DA7EE4A1256935D7009D94EC /* PhotoListViewModel.swift in Sources */,
 			);

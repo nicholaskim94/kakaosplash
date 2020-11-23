@@ -36,10 +36,15 @@ extension Dependencies: ServiceFactory {
 
 protocol ViewModelFactory {
     func makePhotoListViewModel() -> PhotoListViewModel
+    func makeSearchedPhotoListViewModel() -> SearchedPhotoListViewModel
 }
 
 extension Dependencies: ViewModelFactory {
     func makePhotoListViewModel() -> PhotoListViewModel {
         return PhotoListViewModel(photoService: makePhotoService())
+    }
+    
+    func makeSearchedPhotoListViewModel() -> SearchedPhotoListViewModel {
+        return SearchedPhotoListViewModel(photoService: makePhotoService())
     }
 }

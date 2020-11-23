@@ -9,7 +9,9 @@ import UIKit
 
 class PhotoDetailViewController: UIViewController {
     
-    private let parentViewModel: PhotoListViewModel
+    typealias ParentViewMdoel = HasObservablePhotos & HasObservableFocusedIndex
+    
+    private let parentViewModel: ParentViewMdoel
     private let dependencies: Dependencies
     
     // MARK: - UI elements
@@ -50,7 +52,7 @@ class PhotoDetailViewController: UIViewController {
     }()
     
     
-    init(dependencies: Dependencies, parentViewModel: PhotoListViewModel) {
+    init(dependencies: Dependencies, parentViewModel: ParentViewMdoel) {
         self.dependencies = dependencies
         self.parentViewModel = parentViewModel
         super.init(nibName: nil, bundle: nil)

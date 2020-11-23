@@ -1,18 +1,25 @@
 //
-//  PhotoListViewController.swift
+//  SearchedPhotoListViewController.swift
 //  Kakaosplash
 //
-//  Created by Nicholas Kim on 2020/11/18.
+//  Created by Nicholas Kim on 2020/11/23.
 //
 
 import UIKit
 
-class PhotoListViewController: UIViewController {
+class SearchedPhotoListViewController: UIViewController {
     
-    private let viewModel: PhotoListViewModel
+    private let viewModel: SearchedPhotoListViewModel
     private let dependencies: Dependencies
     
-    private var resultsController: SearchedPhotoListViewController?
+    var query: String? {
+        didSet {
+            guard let query = query else { return }
+            if query.isNotEmpty {
+                viewModel.searchPhotoList(for: query)
+            }
+        }
+    }
     
     // MARK: - UI elements
     private lazy var tableView: UITableView = {
@@ -37,7 +44,7 @@ class PhotoListViewController: UIViewController {
     
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
-        self.viewModel = dependencies.makePhotoListViewModel()
+        self.viewModel = dependencies.makeSearchedPhotoListViewModel()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -50,35 +57,8 @@ class PhotoListViewController: UIViewController {
         
         setupViews()
         
-        resultsController = SearchedPhotoListViewController(dependencies: dependencies)
-        if let resultsController = resultsController {
-            addChild(resultsController)
-            resultsController.view.frame = view.bounds
-            view.addSubview(resultsController.view)
-            resultsController.didMove(toParent: self)
-            resultsController.view.isHidden = true
-        }
-        
-        let searchController = UISearchController(searchResultsController: nil)
-        
-        searchController.searchBar.placeholder = "Search photos"
-        searchController.searchBar.tintColor = .white
-        searchController.searchBar.barStyle = .black
-
-        searchController.searchBar.delegate = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        
-        searchController.searchBar.sizeToFit()
-        
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-        
         bindToViewModel()
-        viewModel.fetchPhotoList()
     }
-    
-    
     
     private func setupViews() {
         view.addSubview(tableView)
@@ -131,7 +111,7 @@ class PhotoListViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
-extension PhotoListViewController: UITableViewDataSource, UITableViewDelegate {
+extension SearchedPhotoListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.photos.value.count + 20
@@ -180,16 +160,16 @@ extension PhotoListViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSourcePrefetching {
-extension PhotoListViewController: UITableViewDataSourcePrefetching {
+extension SearchedPhotoListViewController: UITableViewDataSourcePrefetching {
 
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         if indexPaths.contains(where: isLoadingCell) {
-            viewModel.fetchNextPhotoListPage()
+            viewModel.searchNextPhotoListPage()
         }
     }
 }
 
-private extension PhotoListViewController {
+private extension SearchedPhotoListViewController {
 
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
         let photosCount = viewModel.photos.value.count
@@ -197,28 +177,4 @@ private extension PhotoListViewController {
     }
 }
 
-extension PhotoListViewController: UISearchBarDelegate {
 
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let query = searchBar.text else {
-            return
-        }
-        
-        showSearchResultsViewController()
-        resultsController?.query = query
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        hideSearchResultsViewController()
-    }
-}
-
-private extension PhotoListViewController {
-    func showSearchResultsViewController() {
-        resultsController?.view.isHidden = false
-    }
-    
-    func hideSearchResultsViewController() {
-        resultsController?.view.isHidden = true
-    }
-}

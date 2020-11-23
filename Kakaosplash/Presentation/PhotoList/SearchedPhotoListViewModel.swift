@@ -1,18 +1,20 @@
 //
-//  PhotoListViewModel.swift
+//  SearchedPhotoListViewModel.swift
 //  Kakaosplash
 //
-//  Created by Nicholas Kim on 2020/11/21.
+//  Created by Nicholas Kim on 2020/11/23.
 //
 
 import Foundation
 
-class PhotoListViewModel: HasObservablePhotos & HasObservableFocusedIndex {
+class SearchedPhotoListViewModel: HasObservablePhotos & HasObservableFocusedIndex {
     
     private let photoService: PhotoService
     
     private var currentPage = 1
     private var isLoading = false
+    private var query = ""
+    private var canLoadMore = true
     
     
     // Mark: Observables
@@ -24,33 +26,42 @@ class PhotoListViewModel: HasObservablePhotos & HasObservableFocusedIndex {
         self.photoService = photoService
     }
     
-    func fetchPhotoList() {
-        if currentPage == 1 {
-            fetchCurrentPhotoListPage()
-        }
+    func searchPhotoList(for query: String) {
+        self.query = query
+        currentPage = 1
+        photos.value = []
+        searchCurrentPhotoListPage()
     }
     
-    func fetchNextPhotoListPage() {
+    func searchNextPhotoListPage() {
         if isLoading {
             return
         }
         
+        if !canLoadMore {
+            return
+        }
+            
         currentPage += 1
         
-        fetchCurrentPhotoListPage()
+        searchCurrentPhotoListPage()
     }
-
     
-    private func fetchCurrentPhotoListPage() {
+    private func searchCurrentPhotoListPage() {
         isLoading = true
         
-        photoService.getPhotoList(page: currentPage, orderBy: .latest) { [weak self] result in
+        photoService.searchPhotos(query: query,
+                                  page: currentPage,
+                                  orderBy: .latest) { [weak self] result in
             
             guard let self = self else { return }
             
             switch(result) {
             case .success(let photos):
                 self.photos.value = self.photos.value + photos
+                if photos.isEmpty {
+                    self.canLoadMore = false
+                }
             case .failure(let error):
                 self.error.value = error
             }
@@ -58,5 +69,4 @@ class PhotoListViewModel: HasObservablePhotos & HasObservableFocusedIndex {
             self.isLoading = false
         }
     }
-    
 }

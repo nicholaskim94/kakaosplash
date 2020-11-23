@@ -35,9 +35,6 @@ class PhotoService {
         networkClient.executeRequest(apiRequest) { result in
             switch result {
             case .failure(let error):
-                #if DEBUG
-                print("ERROR_READING_EVENT_LIST", error.localizedDescription)
-                #endif
                 completion(.failure(.network(description: error.localizedDescription)))
                 
             case .success(let data):
@@ -49,7 +46,6 @@ class PhotoService {
                 
                 completion(.success(response))
                 
-                print("LIST", response)
             }
 
         }
@@ -67,9 +63,6 @@ class PhotoService {
         networkClient.executeRequest(apiRequest) { result in
             switch result {
             case .failure(let error):
-                #if DEBUG
-                print("ERROR_READING_EVENT_LIST", error.localizedDescription)
-                #endif
                 completion(.failure(.network(description: error.localizedDescription)))
                 
             case .success(let data):
@@ -81,7 +74,6 @@ class PhotoService {
                 
                 completion(.success(response.results))
                 
-                print("SEARCH", response.results)
             }
 
         }

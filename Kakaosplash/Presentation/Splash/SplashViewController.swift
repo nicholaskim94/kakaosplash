@@ -36,7 +36,10 @@ class SplashViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             guard let self = self else { return }
-            self.replaceRootViewController(to: PhotoListViewController(dependencies: self.dependencies))
+            let viewController = PhotoListViewController(dependencies: self.dependencies)
+            let navigationController = UINavigationController(rootViewController: viewController)
+            navigationController.navigationBar.barTintColor = .black
+            self.replaceRootViewController(to: navigationController)
         }
     }
     
